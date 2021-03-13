@@ -12,7 +12,7 @@ import (
 
 func main() {
 	fmt.Println("Rename files")
-	dirToScan := `D:\scratch\go-lang\rename-file\example2`
+	dirToScan := `D:\scratch\go-lang\rename-file\folder_03`
 	//dirToScan := `G:\02`
 	files, err := ioutil.ReadDir(dirToScan)
 	if err != nil {
@@ -32,6 +32,15 @@ func main() {
 			if len(arr) == 1 && len(arr[0]) == 3 {
 				fmt.Println("already processed item ", arr[0])
 				part = ffInfo.Name()[3:6]
+			} else if len(arr) == 1 && len(arr[0]) == 2 {
+				fmt.Println("Number in the filename ", arr[0])
+				arr := strings.Split(ffInfo.Name(), "-") // something like '11 - My song.mp3'
+				if len(arr) > 1 {
+					arr[1] = strings.Trim(arr[1], " ")
+					part = arr[1][:3]
+				} else {
+					part = ffInfo.Name()[2:5]
+				}
 			}
 			partascii := StringToAsciiBytes(part) // avoid accent characters trouble in filename
 			fmt.Println("ascii: ", partascii)
