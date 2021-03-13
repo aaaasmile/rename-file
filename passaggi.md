@@ -21,3 +21,5 @@ dovrebbe fornire il numero dei files nel folder 01 della SD-card non sono riusci
 Il valore che legge è sempre zero.
 Siccome la lista dei files mp3 non è che viene attualizzata spesso, quando succede, basta ricompilare
 il software con il valore corretto.
+
+Il file da cambiare è web.cpp
