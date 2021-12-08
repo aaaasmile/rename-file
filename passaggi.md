@@ -12,7 +12,11 @@ di un folder, per esempio il folder 01, in una lista casuale senza ripetizioni.
 Quindi è importante avere i files mp3 con il nome giusto per esere lanciati.
 Per creare una lista copio i files mp3 presi da itunes manualmente nella directory ./folder_01
 Qui i nomi dei files sono i più disparati. 
-Ora lancio questo programma Rename-file con go run main.go e la lista dei files dovrebbe essere
+Ora lancio questo programma Rename-file con 
+
+    go run main.go 
+
+e la lista dei files dovrebbe essere
 pronta. 
 Ora bisogna copiare il contenuto di folder_01 nella sd-card del player e modificare il codice di 
 MP3-YX5300. 
@@ -34,4 +38,5 @@ Ho scaricato dei files da youtube e sono troppo grandi per sentirli in macchina
 dove una pausa mi rimanda il play all'inizio del file. Così ho fatto uno split.
 Con WLC 20.04 ho lanciato il seguente comando per spezzettare il file dei sintetizzatori in
 blocchi da 8 minuti e rotti:
-igors@Laptop-Toni:/mnt/d/scratch/go-lang/rename-file/tmp$ ffmpeg -i 001xBa.mp3 -f segment -segment_time 500 -c copy synt-mix-%03d.mp3
+
+    igors@Laptop-Toni:/mnt/d/scratch/go-lang/rename-file/tmp$ ffmpeg -i 001xBa.mp3 -f segment -segment_time 500 -c copy synt-mix-%03d.mp3
