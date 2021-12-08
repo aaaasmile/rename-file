@@ -27,7 +27,7 @@ Ho usato, invece, l'adattatore della carta nello slot del portatile.
 Nota che non tengo gli originali mp3 prima di rinominarli. Perlomeno non in questo progetto.
 Semplicemente con file explorer scrivo il titolo nei meta dati, così riesco a vedere i titoli che ho incluso.
 
-Il file da cambiare nel progetto ESP è web.cpp
+Il file da cambiare nel progetto ESP è synch-card-data.inc
 
 ## Splittare files mp3 grandi
 Ho scaricato dei files da youtube e sono troppo grandi per sentirli in macchina 
