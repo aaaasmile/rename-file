@@ -13,7 +13,7 @@ import (
 func main() {
 	fmt.Println("Rename files")
 	// NOTE:folder_03 and folder_01 are synch with the sd-card of the player
-	dirToScan := `D:\scratch\go-lang\rename-file\folder_03`
+	dirToScan := `D:\scratch\go-lang\rename-file\folder_06`
 	files, err := ioutil.ReadDir(dirToScan)
 	if err != nil {
 		panic(err)

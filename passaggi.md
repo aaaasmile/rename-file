@@ -21,5 +21,17 @@ dovrebbe fornire il numero dei files nel folder 01 della SD-card non sono riusci
 Il valore che legge è sempre zero.
 Siccome la lista dei files mp3 non è che viene attualizzata spesso, quando succede, basta ricompilare
 il software con il valore corretto.
+L'ultima volta che ho letto la carta sd sul computer non ci sono riuscito con il san disk usb reader.
+Ho usato, invece, l'adattatore della carta nello slot del portatile.
 
-Il file da cambiare è web.cpp
+Nota che non tengo gli originali mp3 prima di rinominarli. Perlomeno non in questo progetto.
+Semplicemente con file explorer scrivo il titolo nei meta dati, così riesco a vedere i titoli che ho incluso.
+
+Il file da cambiare nel progetto ESP è web.cpp
+
+## Splittare files mp3 grandi
+Ho scaricato dei files da youtube e sono troppo grandi per sentirli in macchina 
+dove una pausa mi rimanda il play all'inizio del file. Così ho fatto uno split.
+Con WLC 20.04 ho lanciato il seguente comando per spezzettare il file dei sintetizzatori in
+blocchi da 8 minuti e rotti:
+igors@Laptop-Toni:/mnt/d/scratch/go-lang/rename-file/tmp$ ffmpeg -i 001xBa.mp3 -f segment -segment_time 500 -c copy synt-mix-%03d.mp3
