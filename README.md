@@ -8,6 +8,8 @@ Then run it with:
 
     go run main.go
 
+The processed folder is hard coded in main.go.
+
 ## Example result
 In folder:
 

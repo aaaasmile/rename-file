@@ -9,6 +9,8 @@ compreso tra 001 e 999.
 ## Creazione della Lista
 Il programma https://github.com/aaaasmile/MP3-YX5300 esegue tutti i files messi all'interno
 di un folder, per esempio il folder 01, in una lista casuale senza ripetizioni.
+Il folder che viene processato è codificato hard mel file main.go. Un solo folder
+viene processato pe volta.
 Quindi è importante avere i files mp3 con il nome giusto per esere lanciati.
 Per creare una lista copio i files mp3 presi da itunes manualmente nella directory ./folder_01
 Qui i nomi dei files sono i più disparati. 
