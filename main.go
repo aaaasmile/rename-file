@@ -13,7 +13,7 @@ import (
 func main() {
 	fmt.Println("Rename files")
 	// NOTE:folder_03 and folder_01 are synch with the sd-card of the player
-	dirToScan := `D:\scratch\go-lang\rename-file\folder_07`
+	dirToScan := `D:\Projects\go-lang\rename-file\folder_07`
 	files, err := ioutil.ReadDir(dirToScan)
 	if err != nil {
 		panic(err)
@@ -21,7 +21,7 @@ func main() {
 	// The mp3 filename format for Yx5300 Chip is:
 	// 001xxx.mp3
 	// use the inial filename instead of xxx
-	renum := regexp.MustCompile("[0-9]+")
+	renum := regexp.MustCompile("^[0-9]+")
 	for ix, ffInfo := range files {
 		if !ffInfo.IsDir() {
 			fmt.Println("File: ", ix, ffInfo.Name())
